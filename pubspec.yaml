@@ -1,0 +1,35 @@
+name: autism_app
+description: "A new Flutter project."
+# Prevents the package from being accidentally published to pub.dev
+publish_to: 'none'
+
+# Version and build number
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.9
+  google_fonts: any
+  intl: any
+  flutter_screenutil: ^5.9.3
+  pinput: ^5.0.0
+  auto_size_text: ^3.0.0
+
+dev_dependencies:
+  flutter_launcher_icons: any
+  flutter_lints: any
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  # Proper indentation for assets
+  assets:
+    - assets/images/
+    - assets/icons/
