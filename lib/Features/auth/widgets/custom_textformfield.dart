@@ -8,23 +8,28 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
   final Widget? suffix;
   final Widget? prefix;
+  final TextEditingController? controller;
+  void Function()? onTap;
 
-  const CustomTextField({
+  CustomTextField({
     Key? key,
     required this.hintText,
+    this.onTap,
     this.keyboardType = TextInputType.text,
     this.obscureText = false,
     this.suffix,
     this.prefix,
+    this.controller,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      onTap: onTap,
       decoration: InputDecoration(
         constraints: BoxConstraints(
             minHeight: 56.h, minWidth: 337.w, maxHeight: 56.h, maxWidth: 337.w),
-        contentPadding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 15.h),
         hintText: hintText,
         hintStyle: AppTextStyles.style14grays500,
         suffixIcon: suffix,

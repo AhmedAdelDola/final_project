@@ -1,4 +1,5 @@
 import 'package:autism_app/Core/Utils/Assets/icons/app_icons.dart';
+import 'package:autism_app/Core/Utils/Assets/images/app_images.dart';
 import 'package:autism_app/Core/Utils/Text/text_style.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class ManageAcc extends StatelessWidget {
                           CircleAvatar(
                             radius: 23.w,
                             child: Image.asset(
-                              AppIcons.vector,
+                              AppImages.Maria,
                               width: 50.h,
                               height: 40.h,
                             ),

@@ -119,99 +119,108 @@ class HomeAppbar extends StatelessWidget {
                   AutoSizeText(
                     '2-days streak',
                     style: AppTextStyles.style18black500
-                        .copyWith(color: Color(0xFF1025AD), fontSize: 16.sp),
+                        .copyWith(color: Color(0xFF1025AD), fontSize: 12.sp),
                   ),
                 ],
               ),
               ontap: () {},
             ),
             SizedBox(height: 35.h),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 9.1,
-                      blurStyle: BlurStyle.normal,
-                      color: Color.fromRGBO(25, 101, 209, 0.7))
-                ],
-                border: Border.all(
-                    strokeAlign: BorderSide.strokeAlignInside,
-                    color: Color.fromRGBO(255, 255, 255, 0.15),
-                    width: 1),
-                borderRadius: BorderRadius.circular(8.r),
-                color: Color.fromRGBO(255, 255, 255, 0.15),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 50.h,
-                        height: 50.h,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(255, 255, 255, 0.15),
-                            shape: BoxShape.circle,
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(0, 6),
-                                  color: Color.fromRGBO(25, 101, 209, 0.7),
-                                  blurRadius: 19.8)
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 4.h),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 9.1,
+                        blurStyle: BlurStyle.normal,
+                        color: Color.fromRGBO(25, 101, 209, 0.7))
+                  ],
+                  border: Border.all(
+                      strokeAlign: BorderSide.strokeAlignInside,
+                      color: Color.fromRGBO(255, 255, 255, 0.15),
+                      width: 1),
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: Color.fromRGBO(255, 255, 255, 0.15),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 50.h,
+                            height: 50.h,
+                            decoration: BoxDecoration(
+                                color: Color.fromRGBO(255, 255, 255, 0.15),
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                      offset: Offset(0, 6),
+                                      color: Color.fromRGBO(25, 101, 209, 0.7),
+                                      blurRadius: 19.8)
+                                ],
+                                border: Border.all(
+                                    strokeAlign: BorderSide.strokeAlignInside,
+                                    color: Color.fromRGBO(255, 255, 255, 0.19),
+                                    width: 1)),
+                            child: Image.asset(
+                              width: 30.w,
+                              height: 30.h,
+                              AppIcons.lia,
+                            ),
+                          ),
+                          SizedBox(width: 8.w),
+                          Column(
+                            children: [
+                              AutoSizeText('Chat with Lia',
+                                  style: AppTextStyles.style20weight600),
+                              AutoSizeText('personal Ai Assist',
+                                  style: AppTextStyles.style20weight600
+                                      .copyWith(
+                                          fontSize: 15.sp,
+                                          fontWeight: FontWeight.w400)),
                             ],
-                            border: Border.all(
-                                strokeAlign: BorderSide.strokeAlignInside,
-                                color: Color.fromRGBO(255, 255, 255, 0.19),
-                                width: 1)),
-                        child: Image.asset(
-                          width: 30.w,
-                          height: 30.h,
-                          AppIcons.lia,
-                        ),
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 8.w),
-                      Container(
-                        child: Column(
+                    ),
+                    Expanded(
+                      child: CustomButton(
+                        hight: 44,
+                        width: 100,
+                        buttonStyle: ButtonStyle(
+                            backgroundColor:
+                                WidgetStatePropertyAll(Colors.white),
+                            fixedSize:
+                                WidgetStatePropertyAll(Size(100.w, 44.h)),
+                            shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(6.52))))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            AutoSizeText('Chat with Lia',
-                                style: AppTextStyles.style20weight600),
-                            AutoSizeText('personal Ai Assist',
-                                style: AppTextStyles.style20weight600.copyWith(
-                                    fontSize: 15.sp,
-                                    fontWeight: FontWeight.w400)),
+                            AutoSizeText(
+                              'Plus',
+                              style: AppTextStyles.style18black500.copyWith(
+                                  fontFamily: GoogleFonts.inter().fontFamily,
+                                  color: Color(0xFF1025AD)),
+                            ),
+                            Icon(
+                              Icons.add,
+                              color: Color(0xFF1025AD),
+                              size: 18.w,
+                            )
                           ],
                         ),
+                        ontap: () {},
                       ),
-                    ],
-                  ),
-                  CustomButton(
-                    hight: 44,
-                    width: 97,
-                    buttonStyle: ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Colors.white),
-                        fixedSize: WidgetStatePropertyAll(Size(97.w, 44.h)),
-                        shape: WidgetStatePropertyAll(RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(6.52))))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        AutoSizeText(
-                          'Plus',
-                          style: AppTextStyles.style18black500.copyWith(
-                              fontFamily: GoogleFonts.inter().fontFamily,
-                              color: Color(0xFF1025AD)),
-                        ),
-                        Icon(
-                          Icons.add,
-                          color: Color(0xFF1025AD),
-                          size: 18.w,
-                        )
-                      ],
                     ),
-                    ontap: () {},
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

@@ -173,7 +173,7 @@ class WelcomeScreen extends StatelessWidget {
                                 hight: 56.h,
                                 width: 169.w,
                                 ontap: () {
-                                  // Navigate to Parent Hub
+                                  NavigatetoKidsHub(context);
                                 },
                                 txt: 'Kid Zone'),
                           ),
@@ -192,5 +192,9 @@ class WelcomeScreen extends StatelessWidget {
 
   NavigatetoParentHub(context) {
     Navigator.pushReplacementNamed(context, AppRoutes.parent_home);
+  }
+
+  NavigatetoKidsHub(context) {
+    Navigator.pushReplacementNamed(context, AppRoutes.childSplash);
   }
 }
